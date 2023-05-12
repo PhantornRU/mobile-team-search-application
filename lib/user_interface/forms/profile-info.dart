@@ -131,8 +131,8 @@ class profilpage extends StatelessWidget {
             ),
             Positioned(
               // borderjET (40:364)
-              left: 0*fem,
-              top: 0*fem,
+              left: -90*fem,
+              top: -75*fem,
               child: Align(
                 child: SizedBox(
                   width: 604*fem,

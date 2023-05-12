@@ -130,8 +130,8 @@ class searchmemberpage extends StatelessWidget {
             ),
             Positioned(
               // borderF2j (20:890)
-              left: 0*fem,
-              top: 0*fem,
+              left: -90*fem,
+              top: -75*fem,
               child: Align(
                 child: SizedBox(
                   width: 604*fem,

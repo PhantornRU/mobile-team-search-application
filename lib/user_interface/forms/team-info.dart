@@ -72,8 +72,8 @@ class teampage extends StatelessWidget {
             ),
             Positioned(
               // borderV2j (20:889)
-              left: 0*fem,
-              top: 0*fem,
+              left: -90*fem,
+              top: -75*fem,
               child: Align(
                 child: SizedBox(
                   width: 604*fem,

@@ -148,8 +148,8 @@ class profileeditpage extends StatelessWidget {
             ),
             Positioned(
               // borderoGf (40:224)
-              left: 0*fem,
-              top: 0*fem,
+              left: -90*fem,
+              top: -75*fem,
               child: Align(
                 child: SizedBox(
                   width: 604*fem,
