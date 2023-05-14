@@ -66,13 +66,24 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     //Все оборачиваем в Scaffoold для использования его отрисовок.
     return Scaffold(
-      body: Container(
-        //Отступы для всех вложеных виджетов в основнйо контейнер.
-        //В примере делаю только сверху, чтобы не заплывало на апп бар.
-        padding: const EdgeInsets.only(top: 28),
-        //Лист с нашими виджетами
-        child: _widgetOptions.elementAt(_selectedIndex),
-        //Рекомендую добавить сюда отступы.
+      body: DraggableScrollableSheet(
+        initialChildSize: 1, //Отключаем отступы от AppBar
+
+        builder: (BuildContext context, ScrollController scrollController) {
+          return Container(
+            color: Colors.indigoAccent[100],
+            //Отступы для всех вложеных виджетов в основнйо контейнер.
+            //В примере делаю только сверху, чтобы не заплывало на апп бар.
+            padding: const EdgeInsets.only(top: 28),
+            child: ListView.builder(
+              controller: scrollController,
+              itemBuilder: (BuildContext context, int index) {
+              //Лист с нашими виджетами
+              return _widgetOptions.elementAt(_selectedIndex);//ListTile(title: Text('Item $index'));
+              },
+            ),
+          );
+        },
       ),
       //Нижнее навигационное меню.
       bottomNavigationBar: BottomNavigationBar(
